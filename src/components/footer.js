@@ -18,7 +18,7 @@ function Footer() {
                 commodo consequat.
               </h1>
               <div className="footer__icons">
-                <a href="" target="_blank" rel="noopener noreferrer">
+                <a href="tel:+998909125646" target="_blank" rel="noopener noreferrer">
                   <img
                     className="footer__icon"
                     src="/telegram.png"
@@ -32,7 +32,7 @@ function Footer() {
                     alt="Call"
                   />
                 </a>
-                <a href="" target="_blank" rel="noopener noreferrer">
+                <a href="tel:+998909125646" target="_blank" rel="noopener noreferrer">
                   <img
                     className="footer__icon"
                     src="/instagram.png"
