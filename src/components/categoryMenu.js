@@ -1,21 +1,25 @@
 import React, { useState } from "react";
 
-function CategoryMenu() {
+function CategoryMenu({ onSelectCategory }) {
   const [open, setOpen] = useState(false);
-
   const toggleMenu = () => setOpen(!open);
+
+  const handleSelect = (categoryEnum) => {
+    onSelectCategory(categoryEnum);
+    setOpen(false);
+  };
 
   return (
     <div className="catalog-wrapper">
       <button className="catalog-button" onClick={toggleMenu}>
-        <span className="burger-icon">☰</span> Каталог
+        ☰ Каталог
       </button>
       {open && (
         <div className="dropdown-menu">
-          <div className="dropdown-item">Кроссовки</div>
-          <div className="dropdown-item">Футболки</div>
-          <div className="dropdown-item">Джинсы</div>
-          <div className="dropdown-item">Платье</div>
+          <div className="dropdown-item" onClick={() => handleSelect("SHOES")}>Кроссовки</div>
+          <div className="dropdown-item" onClick={() => handleSelect("TSHIRT")}>Футболки</div>
+          <div className="dropdown-item" onClick={() => handleSelect("PANTS")}>Джинсы</div>
+          <div className="dropdown-item" onClick={() => handleSelect("DRESS")}>Платье</div>
         </div>
       )}
     </div>

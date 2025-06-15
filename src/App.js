@@ -1,14 +1,19 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Header from "./components/header";
-import ProductUploader from "./components/productUploader";
-import ProductCard from "./components/productCard";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./components/homePage";
+import OrderPage from "./components/orderPage";
+import Favourites from "./components/favourites";
+import ShoppingCart from "./components/shoppingCart";
 function App() {
   return (
-    <div>
-      <Header />
-      <ProductCard />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/orders" element={<OrderPage />} />
+        <Route path="/favourites" element={<Favourites />} />
+        <Route path="/cart" element={<ShoppingCart />} />
+      </Routes>
+    </Router>
   );
 }
 
